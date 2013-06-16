@@ -2,8 +2,6 @@
 <resources>
     <string name="app_name">FacebookConnect</string>
     <string name="app_id">383306508445215</string>
-    <string name="get_started">To get started, log in using Facebook</string>
-    <string name="settings">Settings</string>
     <string name="query">Query</string>
     <string name="multiQuery">Multi-query</string>
 </resources>
