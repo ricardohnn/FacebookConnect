@@ -24,23 +24,23 @@
       </GlobalState>
     </option>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="54baadd5-745e-407e-8b85-dd2c6ec5f67f" name="Default" comment="" />
     <ignored path="FacebookConnect.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371329021435" ignored="false" />
-    <file path="/fragment.java" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371317240536" ignored="false" />
+    <file path="/fragment.java" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371342676317" ignored="false" />
     <file path="$PROJECT_DIR$/../FacebookConnectLibs/facebook-android-sdk-3.0.1/samples/HelloFacebookSample/src/com/facebook/samples/hellofacebook/HelloFacebookSampleActivity.java" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371317410589" ignored="false" />
     <file path="/strings.xml" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371318171515" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371318538058" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371342562215" ignored="false" />
     <file path="/main.xml" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371329017445" ignored="false" />
     <file path="/MainActivity.java" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371330352592" ignored="false" />
     <file path="/SplashFragment.java" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371321956766" ignored="false" />
-    <file path="/Dummy.txt" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371328783435" ignored="false" />
+    <file path="/Dummy.txt" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371341517125" ignored="false" />
     <file path="/SelectionFragment.java" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371322792498" ignored="false" />
+    <file path="/MainActivityAndroid.java" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371341854755" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/mobilis/FacebookConnect/R.java" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371342570417" ignored="false" />
+    <file path="/MainFragment.java" changelist="54baadd5-745e-407e-8b85-dd2c6ec5f67f" time="1371342811422" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,61 +101,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mobilis/FacebookConnect/Activities/MainActivity.java">
+      <file leaf-file-name="MainFragment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/mobilis/FacebookConnect/Fragments/MainFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="5" selection-start="3919" selection-end="3919" vertical-scroll-proportion="-0.22340426">
+            <state line="76" column="29" selection-start="2889" selection-end="2889" vertical-scroll-proportion="0.60106385">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#964#1247#0" expanded="true" />
-                <element signature="e#1232#1233#0" expanded="true" />
+                <element signature="e#1674#2586#0" expanded="true" />
+                <element signature="e#2278#2508#0" expanded="true" />
+                <element signature="e#2481#2482#0" expanded="true" />
+                <element signature="e#2575#2576#0" expanded="true" />
+                <element signature="e#2634#3690#0" expanded="true" />
+                <element signature="e#3382#3612#0" expanded="true" />
+                <element signature="e#3585#3586#0" expanded="true" />
+                <element signature="e#3679#3680#0" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="45" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="58" selection-start="946" selection-end="946" vertical-scroll-proportion="-10.8">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="selection.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/selection.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="62" selection-start="596" selection-end="596" vertical-scroll-proportion="-8.4">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="splash.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/splash.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="82" selection-start="1668" selection-end="1668" vertical-scroll-proportion="-10.76">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -170,14 +131,17 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/com/mobilis/FacebookConnect/MainActivity.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/splash.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilis/FacebookConnect/Fragments/SplashFragment.java" />
         <option value="$PROJECT_DIR$/res/layout/selection.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilis/FacebookConnect/Fragments/SelectionFragment.java" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/mobilis/FacebookConnect/Activities/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/mobilis/FacebookConnect/Activities/MainActivityAndroid.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/layout/main_android.xml" />
+        <option value="$PROJECT_DIR$/src/com/mobilis/FacebookConnect/Fragments/MainFragment.java" />
       </list>
     </option>
   </component>
@@ -347,6 +311,7 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="NexusOneGoogleApi" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
   </component>
@@ -483,8 +448,8 @@
     </configuration>
     <configuration default="false" name="FacebookConnect" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="FacebookConnect" />
-      <option name="ACTIVITY_CLASS" value="com.mobilis.FacebookConnect.Activities.MainActivity" />
-      <option name="MODE" value="specific_activity" />
+      <option name="ACTIVITY_CLASS" value="com.mobilis.FacebookConnect.Activities.MainActivityAndroid" />
+      <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
@@ -633,13 +598,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="94" selection-start="519" selection-end="519" vertical-scroll-proportion="0.2393617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilis/FacebookConnect/Fragments/SplashFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="12" selection-start="336" selection-end="336" vertical-scroll-proportion="0.34574467">
@@ -658,7 +616,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/selection.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="62" selection-start="596" selection-end="596" vertical-scroll-proportion="-8.4">
+        <state line="14" column="62" selection-start="596" selection-end="596" vertical-scroll-proportion="0.38961038">
           <folding />
         </state>
       </provider>
@@ -668,7 +626,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/splash.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="82" selection-start="1668" selection-end="1668" vertical-scroll-proportion="-10.76">
+        <state line="42" column="82" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.49907234">
           <folding />
         </state>
       </provider>
@@ -678,19 +636,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="58" selection-start="946" selection-end="946" vertical-scroll-proportion="-10.8">
+        <state line="18" column="58" selection-start="946" selection-end="946" vertical-scroll-proportion="0.5009276">
           <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="45" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mobilis/FacebookConnect/Activities/MainActivity.java">
@@ -700,6 +651,56 @@
             <element signature="imports" expanded="true" />
             <element signature="e#964#1247#0" expanded="true" />
             <element signature="e#1232#1233#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="44" selection-start="705" selection-end="705" vertical-scroll-proportion="0.34574467">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="50" selection-start="369" selection-end="369" vertical-scroll-proportion="0.1861702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main_android.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="14" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.94434136">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilis/FacebookConnect/Activities/MainActivityAndroid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="41" selection-start="502" selection-end="502" vertical-scroll-proportion="0.3882979">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mobilis/FacebookConnect/Fragments/MainFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="29" selection-start="2889" selection-end="2889" vertical-scroll-proportion="0.60106385">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1674#2586#0" expanded="true" />
+            <element signature="e#2278#2508#0" expanded="true" />
+            <element signature="e#2481#2482#0" expanded="true" />
+            <element signature="e#2575#2576#0" expanded="true" />
+            <element signature="e#2634#3690#0" expanded="true" />
+            <element signature="e#3382#3612#0" expanded="true" />
+            <element signature="e#3585#3586#0" expanded="true" />
+            <element signature="e#3679#3680#0" expanded="true" />
           </folding>
         </state>
       </provider>
