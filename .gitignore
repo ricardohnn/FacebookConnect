@@ -11,9 +11,13 @@
 # generated files
 bin/
 gen/
+FacebookConnectLibs/facebook-android-sdk-3.0.1/facebook/gen/
+FacebookConnectLibs/facebook-android-sdk-3.0.1/facebook/bin/
 
 # Local configuration file (sdk path, etc)
 local.properties
 
 # Intellij project files
+FacebookConnect/.idea/
+FacebookConnect/out/
 .iml
