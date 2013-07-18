@@ -11,6 +11,7 @@ import android.widget.Button;
 import com.facebook.*;
 import com.facebook.widget.LoginButton;
 import com.mobilis.FacebookConnect.R;
+import com.mobilis.FacebookConnect.Activities.MyProfile;
 
 import java.util.Arrays;
 
@@ -65,6 +66,10 @@ public class MainFragment extends Fragment {
                             }
                         });
                 Request.executeBatchAsync(request);
+				Intent intent = new Intent(getActivity(), MyProfile.class);
+
+				startActivity(intent);
+                
             }
         });
 
