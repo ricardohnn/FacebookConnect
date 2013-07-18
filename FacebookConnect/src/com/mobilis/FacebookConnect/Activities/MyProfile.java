@@ -1,11 +1,8 @@
 package com.mobilis.FacebookConnect.Activities;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.widget.ListView;
 
@@ -13,19 +10,10 @@ import com.facebook.HttpMethod;
 import com.facebook.Request;
 import com.facebook.Response;
 import com.facebook.Session;
-import com.google.gson.Gson;
 import com.mobilis.FacebookConnect.R;
 
 public class MyProfile extends Activity {
-	class Amigos{
-		String name;
-		Amigos(){}
-	}
-	class Container {
-	    List<Amigos> data;
-	    Container(){}
-	}
-		
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -40,17 +28,9 @@ public class MyProfile extends Activity {
                 HttpMethod.GET,
                 new Request.Callback(){
                     public void onCompleted(Response response) {                 	
-                    	Gson gson = new Gson();
                     	String jsonString = response.getGraphObject().getInnerJSONObject().toString();
-                    	Container container = gson.fromJson(jsonString,Container.class);
-                        List<String> friends = new ArrayList<String>();
-                        for (Amigos s : container.data){
-                        	friends.add(s.name);
-                        }
-                    	Log.i("TEST", friends.get(0));
-                    	ListView lista = (ListView) findViewById(R.id.listadeAmigos);
-                    	MyProfile_adapter adapter = new MyProfile_adapter(getApplication(), friends);
-                    	lista.setAdapter(adapter);               	
+                    	ListView lista = (ListView) MyProfile.this.findViewById(R.id.listadeAmigos);
+                    	new ParseFriendlist(MyProfile.this.getApplication(),lista).execute(jsonString);
                     }
                 });
         Request.executeBatchAsync(request);
