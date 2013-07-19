@@ -23,14 +23,16 @@ public class MyProfile extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_my_profile);
 		
-
+		//Dialogo de progresso para melhorar a experiencia do usuario
 		progressDialog = new ProgressDialog(MyProfile.this);
 		progressDialog.setTitle("Carregando dados");
 		progressDialog.setMessage("Por favor, aguarde...");
 		progressDialog.setCancelable(false);
 		progressDialog.show(); 
+		
         Session session = Session.getActiveSession();
-  
+        
+        //Tratamento dos dados do perfil do usuario como nome e imagem do perfil
 		String userQuery = "SELECT name,pic FROM user WHERE uid=me()";
         Bundle params1 = new Bundle();
         params1.putString("q", userQuery);
@@ -51,8 +53,7 @@ public class MyProfile extends Activity {
         		});
         Request.executeBatchAsync(request1);
 
-
-		
+		//Pegando os nomes dos amigos
         String friendsQuery = "SELECT name FROM user WHERE uid IN (SELECT uid1 FROM friend WHERE uid2=me())";
         Bundle params = new Bundle();
         params.putString("q", friendsQuery);
