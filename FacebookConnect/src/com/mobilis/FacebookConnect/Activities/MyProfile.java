@@ -2,6 +2,7 @@ package com.mobilis.FacebookConnect.Activities;
 
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ImageView;
@@ -12,17 +13,25 @@ import com.facebook.HttpMethod;
 import com.facebook.Request;
 import com.facebook.Response;
 import com.facebook.Session;
+
 import com.mobilis.FacebookConnect.R;
 
 public class MyProfile extends Activity {
-
+	ProgressDialog progressDialog;
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) {  
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_my_profile);
+		
+
+		progressDialog = new ProgressDialog(MyProfile.this);
+		progressDialog.setTitle("Carregando dados");
+		progressDialog.setMessage("Por favor, aguarde...");
+		progressDialog.setCancelable(false);
+		progressDialog.show(); 
         Session session = Session.getActiveSession();
-        
-		String userQuery = "SELECT name,pic_big FROM user WHERE uid=me()";
+  
+		String userQuery = "SELECT name,pic FROM user WHERE uid=me()";
         Bundle params1 = new Bundle();
         params1.putString("q", userQuery);
         Request request1 = new Request(session,
@@ -36,7 +45,7 @@ public class MyProfile extends Activity {
 						TextView nome = (TextView) findViewById(R.id.nome_profile);
 						ImageView imagem_profile = (ImageView) findViewById(R.id.imagem_perfil);
                     	String jsonString2 = response.getGraphObject().getInnerJSONObject().toString();
-                    	new ParseProfileInfo(nome, imagem_profile).execute(jsonString2);						
+                    	new ParseProfileInfo(nome, imagem_profile,progressDialog).execute(jsonString2);						
 					}
         	
         		});
@@ -55,11 +64,11 @@ public class MyProfile extends Activity {
                     public void onCompleted(Response response) {                 	
                     	String jsonString = response.getGraphObject().getInnerJSONObject().toString();
                     	ListView lista = (ListView) MyProfile.this.findViewById(R.id.listadeAmigos);
-                    	new ParseFriendlist(MyProfile.this.getApplication(),lista).execute(jsonString);
+                    	new ParseFriendlist(MyProfile.this.getApplication(),lista,progressDialog).execute(jsonString);
                     }
                 });
         Request.executeBatchAsync(request);
-        
+
 	}
 
 	@Override

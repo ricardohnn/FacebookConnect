@@ -7,6 +7,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
 
+import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -17,7 +18,7 @@ import com.google.gson.Gson;
 
 class Profile{
 	String name;
-	String pic_big;
+	String pic;
 	Profile(){}
 }
 class ProfileContainer {
@@ -30,10 +31,12 @@ public class ParseProfileInfo extends AsyncTask<String, Void, String[]>{
 	TextView nome;
 	ImageView imagem_perfil;
 	Bitmap bit;
+	ProgressDialog progress;
 	
-	ParseProfileInfo(TextView nome, ImageView imagem_perfil){
+	ParseProfileInfo(TextView nome, ImageView imagem_perfil, ProgressDialog progress){
 		this.nome = nome;
 		this.imagem_perfil = imagem_perfil;
+		this.progress = progress;
 	}
 	@Override
 	protected String[] doInBackground(String... json) {
@@ -41,7 +44,7 @@ public class ParseProfileInfo extends AsyncTask<String, Void, String[]>{
     	ProfileContainer container = gson.fromJson(json[0],ProfileContainer.class);
         String[] friends = new String[2];
         friends[0] = container.data.get(0).name;
-        friends[1] = container.data.get(0).pic_big;
+        friends[1] = container.data.get(0).pic;
         
         this.bit = downloadImage(friends[1]);
         
@@ -51,6 +54,7 @@ public class ParseProfileInfo extends AsyncTask<String, Void, String[]>{
     	this.nome.setText(result[0]);
     	if(this.bit != null )
     		this.imagem_perfil.setImageBitmap(this.bit);
+    	this.progress.dismiss();
 
     }
     
