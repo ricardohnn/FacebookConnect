@@ -54,7 +54,7 @@ public class MyProfile extends Activity {
         Request.executeBatchAsync(request1);
 
 		//Pegando os nomes dos amigos
-        String friendsQuery = "SELECT name FROM user WHERE uid IN (SELECT uid1 FROM friend WHERE uid2=me())";
+        String friendsQuery = "SELECT name,uid FROM user WHERE uid IN (SELECT uid1 FROM friend WHERE uid2=me())";
         Bundle params = new Bundle();
         params.putString("q", friendsQuery);
         Request request = new Request(session,

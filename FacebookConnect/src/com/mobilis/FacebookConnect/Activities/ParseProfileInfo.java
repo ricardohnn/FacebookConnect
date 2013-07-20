@@ -45,8 +45,9 @@ public class ParseProfileInfo extends AsyncTask<String, Void, String[]>{
         String[] friends = new String[2];
         friends[0] = container.data.get(0).name;
         friends[1] = container.data.get(0).pic;
-        
-        this.bit = downloadImage(friends[1]);
+        //tratar quando a foto vem "vazia"...
+        if(friends[1]!=null)
+        	this.bit = downloadImage(friends[1]);
         
 		return friends;
 	}

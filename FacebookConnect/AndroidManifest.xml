@@ -4,8 +4,9 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="10"
-        	  android:targetSdkVersion="17" />
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -30,6 +31,10 @@
         <activity
             android:name="com.mobilis.FacebookConnect.Activities.MyProfile"
             android:label="@string/title_activity_my_profile" >
+        </activity>
+        <activity
+            android:name="com.mobilis.FacebookConnect.Activities.FriendX"
+            android:label="@string/title_activity_friend_x" >
         </activity>
     </application>
 

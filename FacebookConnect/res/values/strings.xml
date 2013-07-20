@@ -10,5 +10,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="Logout">Logout</string>
     <string name="perfil_image">Imagem do seu Perfil</string>
+    <string name="title_activity_friend_x">FriendX</string>
 
 </resources>
