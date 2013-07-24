@@ -36,6 +36,7 @@
             android:name="com.mobilis.FacebookConnect.Activities.FriendX"
             android:label="@string/title_activity_friend_x" >
         </activity>
-    </application>
+		<service android:name="com.mobilis.FacebookConnect.Activities.FollowService"></service>
+		</application>
 
 </manifest>
