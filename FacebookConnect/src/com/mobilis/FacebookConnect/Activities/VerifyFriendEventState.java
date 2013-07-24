@@ -86,7 +86,7 @@ public class VerifyFriendEventState extends AsyncTask<Long, Void, Void> {
 			//Compare status for each event
 			for(Event event : eidList)
 			{
-				Log.i("com.mobilis", getFriendEventStatus(uid, event.eid));
+				Log.i("com.mobilis", "EID: "+event.eid + " - " + getFriendEventStatus(uid, event.eid));
 
 				if( getFriendEventStatus(uid,event.eid) != this.initialState.get(i) ){
 					//TODO Should vibrate

@@ -81,6 +81,7 @@ public class FriendX extends Activity {
 					}
         	
         		});
+        
         Request.executeBatchAsync(request2);
 
 
