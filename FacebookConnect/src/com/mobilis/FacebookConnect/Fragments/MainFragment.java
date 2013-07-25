@@ -11,6 +11,7 @@ import android.widget.Button;
 import com.facebook.*;
 import com.facebook.widget.LoginButton;
 import com.mobilis.FacebookConnect.R;
+import com.mobilis.FacebookConnect.Activities.MyProfile;
 
 import java.util.Arrays;
 
@@ -42,7 +43,7 @@ public class MainFragment extends Fragment {
 
         LoginButton authButton = (LoginButton) view.findViewById(R.id.authButton);
         authButton.setFragment(this);
-        authButton.setReadPermissions(Arrays.asList("user_likes", "user_status"));
+        authButton.setReadPermissions(Arrays.asList("user_likes", "user_status", "friends_status", "user_events", "friends_events", "user_location", "friends_location"));
 
         queryButton = (Button) view.findViewById(R.id.queryButton);
         multiQueryButton = (Button) view.findViewById(R.id.multiQueryButton);
@@ -65,6 +66,10 @@ public class MainFragment extends Fragment {
                             }
                         });
                 Request.executeBatchAsync(request);
+				Intent intent = new Intent(getActivity(), MyProfile.class);
+
+				startActivity(intent);
+                
             }
         });
 
@@ -72,11 +77,12 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                String fqlQuery = "{" +
+               /* String fqlQuery = "{" +
                         "'friends':'SELECT uid2 FROM friend WHERE uid1 = me() LIMIT 25'," +
                         "'friendinfo':'SELECT uid, name, pic_square FROM user WHERE uid IN " +
                         "(SELECT uid2 FROM #friends)'," +
-                        "}";
+                        "}";*/
+            	String fqlQuery="SELECT latitude,longitude FROM location_post WHERE author_uid=100002034301987";
                 Bundle params = new Bundle();
                 params.putString("q", fqlQuery);
                 Session session = Session.getActiveSession();

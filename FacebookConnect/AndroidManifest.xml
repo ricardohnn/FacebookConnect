@@ -1,21 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.mobilis.FacebookConnect"
-          android:versionCode="1"
-          android:versionName="1.0">
-    <uses-sdk android:minSdkVersion="15"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    package="com.mobilis.FacebookConnect"
+    android:versionCode="1"
+    android:versionName="1.0" >
 
-    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
-        <activity android:name=".Activities.MainActivityAndroid"
-                  android:label="@string/app_name">
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity
+            android:name="com.mobilis.FacebookConnect.Activities.MainActivityAndroid"
+            android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.facebook.LoginActivity"/>
-    </application>
+        <activity android:name="com.facebook.LoginActivity" />
+        <activity
+            android:name="com.mobilis.FacebookConnect.Activities.MyProfile"
+            android:label="@string/title_activity_my_profile" >
+        </activity>
+        <activity
+            android:name="com.mobilis.FacebookConnect.Activities.FriendX"
+            android:label="@string/title_activity_friend_x" >
+        </activity>
+		<service android:name="com.mobilis.FacebookConnect.Activities.FollowService"></service>
+		</application>
 
 </manifest>
