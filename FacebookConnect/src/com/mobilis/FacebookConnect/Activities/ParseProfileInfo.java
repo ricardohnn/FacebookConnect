@@ -7,7 +7,6 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
 
-import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -28,15 +27,13 @@ class ProfileContainer {
 
 public class ParseProfileInfo extends AsyncTask<String, Void, String[]>{
 
-	TextView nome;
-	ImageView imagem_perfil;
+	TextView name;
+	ImageView profileImage;
 	Bitmap bit;
-	ProgressDialog progress;
 	
-	ParseProfileInfo(TextView nome, ImageView imagem_perfil, ProgressDialog progress){
-		this.nome = nome;
-		this.imagem_perfil = imagem_perfil;
-		this.progress = progress;
+	ParseProfileInfo(TextView nome, ImageView imagem_perfil){
+		this.name = nome;
+		this.profileImage = imagem_perfil;
 	}
 	@Override
 	protected String[] doInBackground(String... json) {
@@ -45,17 +42,17 @@ public class ParseProfileInfo extends AsyncTask<String, Void, String[]>{
         String[] friends = new String[2];
         friends[0] = container.data.get(0).name;
         friends[1] = container.data.get(0).pic;
-        //tratar quando a foto vem "vazia"...
+        
+        //if we couldn't download the image...
         if(friends[1]!=null)
         	this.bit = downloadImage(friends[1]);
         
 		return friends;
 	}
     protected void onPostExecute(String[] result) {
-    	this.nome.setText(result[0]);
+    	this.name.setText(result[0]);
     	if(this.bit != null )
-    		this.imagem_perfil.setImageBitmap(this.bit);
-    	this.progress.dismiss();
+    		this.profileImage.setImageBitmap(this.bit);
 
     }
     

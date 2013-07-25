@@ -21,8 +21,8 @@
         android:orientation="horizontal" >
 
         <ImageView
-            android:id="@+id/imagem_perfil_amigo"
-            android:contentDescription="@string/perfil_image"
+            android:id="@+id/friend_profile_image"
+            android:contentDescription="@string/image_profile"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:scaleType="fitXY"
@@ -34,7 +34,7 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/nome_amigo"
+                android:id="@+id/friend_name"
                 android:textIsSelectable="true"
                 android:layout_width="match_parent"
                 android:layout_marginLeft="10dp"

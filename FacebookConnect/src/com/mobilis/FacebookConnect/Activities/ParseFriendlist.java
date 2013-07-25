@@ -3,7 +3,6 @@ package com.mobilis.FacebookConnect.Activities;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -26,19 +25,15 @@ class Container {
 	
 public class ParseFriendlist extends AsyncTask<String, Void, List<String> >{
 
-	private ListView listaDeAmigos;
+	private ListView friendListView;
 	private Context mContext;
-	private ProgressDialog progress;
 	private List<String> friendsname = new ArrayList<String>();
 	private List<Long> friendsuid = new ArrayList<Long>(); 
 
-	ParseFriendlist(Context contexto, ListView lista, ProgressDialog progress)
+	ParseFriendlist(Context contexto, ListView lista)
 	{
-		this.listaDeAmigos = lista;
+		this.friendListView = lista;
 		this.mContext = contexto;
-		this.progress = progress;
-
-		
 	}
 	@Override
 	protected List<String> doInBackground(String... arg0) {
@@ -54,9 +49,9 @@ public class ParseFriendlist extends AsyncTask<String, Void, List<String> >{
 		return friendsname;
 	}
     protected void onPostExecute(List<String> result) {
-    	MyProfile_adapter adapter = new MyProfile_adapter(mContext, result);
-    	listaDeAmigos.setAdapter(adapter);
-    	listaDeAmigos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+    	MyProfileAdapter adapter = new MyProfileAdapter(mContext, result);
+    	friendListView.setAdapter(adapter);
+    	friendListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
@@ -71,7 +66,6 @@ public class ParseFriendlist extends AsyncTask<String, Void, List<String> >{
 			}
     		
 		});
-    	this.progress.dismiss();
     }
 
 }

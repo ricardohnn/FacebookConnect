@@ -11,24 +11,24 @@ import android.widget.TextView;
 
 import com.mobilis.FacebookConnect.R;
 
-public class MyProfile_adapter extends BaseAdapter{
-	private List<String> amigos;
+public class MyProfileAdapter extends BaseAdapter{
+	private List<String> friends;
 	private LayoutInflater lf;
 	
-	MyProfile_adapter(Context context, List<String> listaamigos)
+	MyProfileAdapter(Context context, List<String> listaamigos)
 	{
 		super();
-		amigos=listaamigos;
+		friends=listaamigos;
 		lf = LayoutInflater.from(context);
 	}
 	public void setItens(List<String> lista){
-		this.amigos = lista;
+		this.friends = lista;
 	}
 	
 	@Override
 	public int getCount() {
-		if(amigos != null)
-			return amigos.size();
+		if(friends != null)
+			return friends.size();
 		else
 			return 0;
 	}
@@ -36,7 +36,7 @@ public class MyProfile_adapter extends BaseAdapter{
 	@Override
 	public Object getItem(int position) {
 		try {
-			return amigos.get(position);
+			return friends.get(position);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;
@@ -55,13 +55,13 @@ public class MyProfile_adapter extends BaseAdapter{
         if (convertView == null) {
             convertView = lf.inflate(R.layout.myp_itemrow, null);
             holder = new ViewHolder();
-            holder.word = (TextView) convertView.findViewById(R.id.nome_amigo);
+            holder.word = (TextView) convertView.findViewById(R.id.friend_name);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.word.setText(amigos.get(position).toString());
+        holder.word.setText(friends.get(position).toString());
        
 
         return convertView;

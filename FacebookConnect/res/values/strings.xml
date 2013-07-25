@@ -9,7 +9,7 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="Logout">Logout</string>
-    <string name="perfil_image">Imagem do seu Perfil</string>
+    <string name="image_profile">Imagem do seu Perfil</string>
     <string name="title_activity_friend_x">FriendX</string>
     <string name="Follow">Follow</string>
 
